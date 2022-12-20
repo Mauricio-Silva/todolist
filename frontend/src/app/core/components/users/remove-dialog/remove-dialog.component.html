@@ -1,0 +1,21 @@
+<h1 mat-dialog-title>Remove a User</h1>
+<div mat-dialog-content>
+  <table>
+    <tr>
+      <td>Name</td>
+      <td>{{ data[1] }}</td>
+    </tr>
+    <tr>
+      <td>Email</td>
+      <td>{{ data[2] }}</td>
+    </tr>
+    <tr>
+      <td>Status</td>
+      <td>{{ data[3] }}</td>
+    </tr>
+  </table>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="closeDialog()" color="primary">Cancel</button>
+  <button mat-button (click)="removeUser()" cdkFocusInitial>Delete</button>
+</div>

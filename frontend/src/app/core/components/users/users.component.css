@@ -1,0 +1,101 @@
+main {
+  padding: 30px 50px;
+}
+header {
+  display: flex;
+  margin-bottom: 10px;
+}
+header h1 {
+  display: flex;
+  margin: 0px;
+  height: auto;
+  margin-right: 50px;
+  font-size: 40px;
+  align-items: center;
+}
+
+
+
+button {
+    background-color: #4c93b7;
+    padding: 5px 12px;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 18px;
+    cursor: pointer;
+    color: #fff;
+    border: none;
+}
+button:hover {
+    outline: 3px solid rgba(127,178,204,0.5);
+}
+button:active {
+    background-color: #006599;
+}
+button:disabled {
+  background-color: #37647a;
+  pointer-events: none;
+  color: #aaa;
+  cursor: auto;
+}
+button + button {
+  margin-left: 15px;
+}
+
+
+
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+
+
+table {
+  width: 100%;
+}
+tr:hover {
+  background-color: #ecf7ff;
+  cursor: pointer;
+}
+tr:hover td {
+  color: #2196f3 !important;
+  font-weight: 400;
+}
+.mat-row .mat-cell {
+  border-bottom: 1px solid transparent;
+  border-top: 1px solid transparent;
+  cursor: pointer;
+}
+.mat-row:hover .mat-cell {
+  border-color: currentColor;
+  background: whitesmoke;
+}
+.delete-icon {
+  color: #c3352b;
+}
+.delete-icon:hover {
+  color: #ff0000;
+}
+
+
+
+footer {
+  display: flex;
+  margin-top: 30px;
+  padding: 10px 25px;
+  box-shadow: 0px 5px 5px -3px rgb(0 0 0 / 20%), 0px 8px 10px 1px rgb(0 0 0 / 14%), 0px 3px 14px 2px rgb(0 0 0 / 12%);
+  font-size: 14px;
+}
+.footer-item {
+  display: flex;
+  flex: 1;
+}
+.footer-item div {
+  display: flex;
+  align-items: center;
+}
+.footer-item div:first-child {
+  font-weight: 500;
+  margin-right: 15px;
+}

@@ -1,0 +1,17 @@
+import { MatDrawer } from '@angular/material/sidenav';
+import { Component, ViewChild } from '@angular/core';
+
+@Component({
+  selector: 'app-sidenav',
+  templateUrl: './sidenav.component.html',
+  styleUrls: ['./sidenav.component.css']
+})
+export class SidenavComponent  {
+  showFiller = false;
+
+  @ViewChild('drawer') drawer!: MatDrawer;
+
+  showSideNav() {
+    this.drawer.toggle()
+  }
+}

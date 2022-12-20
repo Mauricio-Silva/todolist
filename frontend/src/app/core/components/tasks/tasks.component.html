@@ -1,0 +1,56 @@
+<!-- cSpell:disable -->
+
+<main>
+  <header>
+    <h1>Tasks</h1>
+    <button mat-button routerLink="/users">Users</button>
+    <button mat-raised-button (click)="showTaskCreateDialog()">Cadastrar</button>
+  </header>
+
+
+
+  <div id="tasks-panel" cdkDropListGroup>
+
+    <section>
+      <h2>To do</h2>
+      <div cdkDropList [cdkDropListData]="doTasks" class="list" (cdkDropListDropped)="drop($event)" id="do">
+        <div class="box" cdkDrag [cdkDragData]="task" *ngFor="let task of doTasks">
+          <span (click)="showTaskDetailDialog(task)">{{ task.description }}</span>
+          <mat-icon aria-hidden="false" aria-label="delete-icon" fontIcon="delete" class="delete-icon" (click)="showTaskRemoveDialog(task)"></mat-icon>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Doing</h2>
+      <div class="list" cdkDropList [cdkDropListData]="doingTasks" (cdkDropListDropped)="drop($event)" id="doing">
+        <div class="box" cdkDrag [cdkDragData]="task" *ngFor="let task of doingTasks">
+          <span (click)="showTaskDetailDialog(task)">{{ task.description }}</span>
+          <mat-icon aria-hidden="false" aria-label="delete-icon" fontIcon="delete" class="delete-icon" (click)="showTaskRemoveDialog(task)"></mat-icon>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Done</h2>
+      <div cdkDropList [cdkDropListData]="doneTasks" class="list" (cdkDropListDropped)="drop($event)" id="done">
+        <div class="box" cdkDrag [cdkDragData]="task" *ngFor="let task of doneTasks">
+          <span (click)="showTaskDetailDialog(task)">{{ task.description }}</span>
+          <mat-icon aria-hidden="false" aria-label="delete-icon" fontIcon="delete" class="delete-icon" (click)="showTaskRemoveDialog(task)"></mat-icon>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+
+
+
+
+
+
+
+
+
+

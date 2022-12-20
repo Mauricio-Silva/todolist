@@ -1,0 +1,17 @@
+<h1 mat-dialog-title>Remove a Task</h1>
+<div mat-dialog-content>
+  <table>
+    <tr>
+      <td>Description</td>
+      <td>{{ data[1] }}</td>
+    </tr>
+    <tr>
+      <td>Status</td>
+      <td>{{ data[2] }}</td>
+    </tr>
+  </table>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="closeDialog()" color="primary">Cancel</button>
+  <button mat-button (click)="removeTask()" cdkFocusInitial>Delete</button>
+</div>

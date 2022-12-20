@@ -1,0 +1,21 @@
+<h1 mat-dialog-title>Task</h1>
+<div mat-dialog-content>
+  <p>Task data:</p>
+  <table>
+      <tr>
+        <td>Id</td>
+        <td>{{ data.id }}</td>
+      </tr>
+      <tr>
+        <td>Description</td>
+        <td>{{ data.description }}</td>
+      </tr>
+      <tr>
+        <td>Status</td>
+        <td>{{ data.status }}</td>
+      </tr>
+    </table>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="closeDialog()" color="primary" cdkFocusInitial>Close</button>
+</div>
